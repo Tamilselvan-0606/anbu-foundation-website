@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+  
+  --color-maroon-DEFAULT: #831238;
+  --color-maroon-dark: #5C0B25;
+  --color-maroon-light: #F6E9EE;
+  --color-maroon-soft: #FAF1F4;
+  --color-charcoal: #262126;
+  --color-muted: #70676C;
+  --color-border: #E9E1E5;
+  --color-offwhite: #FAF7F8;
+}
+
+@layer base {
+  html, body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #262126;
+    background-color: #FAF7F8;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  ::selection {
+    background-color: #831238;
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8CAD0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #831238;
+}

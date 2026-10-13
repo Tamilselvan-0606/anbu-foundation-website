@@ -1,0 +1,6 @@
+{
+  "name": "Anbu Foundation | Sathyabama Institute of Science and Technology",
+  "description": "Official website of Anbu Foundation at Sathyabama Institute of Science and Technology. Empowering lives through education, scholarships, inclusion, skill-building, and compassionate community service.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
