@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart } from 'lucide-react';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -22,8 +23,15 @@ export const Scholarship: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Anbu Scholarship"
+        subtitle="“Getting Education is the Basic Right Protecting this Right is our Basic Duty”"
+        badge="Flagship Initiative"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -70,7 +78,7 @@ export const Scholarship: React.FC = () => {
               </div>
 
               {/* Narrative Content */}
-              <div className="lg:col-span-6 space-y-4 text-[15px] text-[#262126] leading-relaxed">
+              <div className="lg:col-span-6 space-y-4 text-[15px] text-[#262126] leading-relaxed text-justify">
                 <p>
                   The Scholarship is offered for children who are meritorious and lacking financial support to continue their education. The foundation is associated with many trusts and peer foundations to offer this scholarship with higher degree of transparency and productivity. Agaram foundation, World vision, Indiavision, Ability foundation, Banyan, NAAM, Maatram and Tamilnadu Blind Association.
                 </p>
@@ -123,6 +131,7 @@ export const Scholarship: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

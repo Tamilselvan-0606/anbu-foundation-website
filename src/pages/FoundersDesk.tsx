@@ -1,10 +1,18 @@
 import React from 'react';
 import { Heart } from 'lucide-react';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 export const FoundersDesk: React.FC = () => {
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Foundation Desk"
+        subtitle="“Answering the Unanswered” — A message from the Founders of Anbu Foundation."
+        badge="Executive Leadership"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -58,7 +66,7 @@ export const FoundersDesk: React.FC = () => {
                 </div>
 
                 {/* Message Body */}
-                <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed">
+                <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed text-justify">
                   <p>
                     Most intrinsic feeling of Life is being Human. Humanity is not an act; it is the way of living. The cause of suffering in people has many reasons but the effect is unique and it is painful. Struggle for Education, Struggle for Survival and Struggle to Empower Self and Nation.
                   </p>
@@ -112,6 +120,7 @@ export const FoundersDesk: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart, ExternalLink, Utensils, HeartPulse, GraduationCap, HandHeart, CheckCircle2 } from 'lucide-react';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -65,8 +66,15 @@ export const JoyOfGiving: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Joy of Giving"
+        subtitle="“Joy of giving is the Joy of living”"
+        badge="Initiative · Compassionate Outreach"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -127,7 +135,7 @@ export const JoyOfGiving: React.FC = () => {
               </div>
 
               {/* Narrative Content */}
-              <div className="lg:col-span-6 space-y-4 text-[15px] text-[#262126] leading-relaxed">
+              <div className="lg:col-span-6 space-y-4 text-[15px] text-[#262126] leading-relaxed text-justify">
                 <p className="font-medium text-[#831238]">
                   The foundation is extending its services to divergent sectors of the society. The prime services are offering food, healthcare and education.
                 </p>
@@ -219,6 +227,7 @@ export const JoyOfGiving: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart, ExternalLink } from 'lucide-react';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -20,8 +21,15 @@ export const SchoolPrograms: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="School Supporting Programs"
+        subtitle="“Teach to a teacher, you are teaching many students. Support a School; you are supporting future of Society”"
+        badge="Initiative · Grassroots Education"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -82,7 +90,7 @@ export const SchoolPrograms: React.FC = () => {
               </div>
 
               {/* Narrative Content */}
-              <div className="lg:col-span-6 space-y-4 text-[15px] text-[#262126] leading-relaxed">
+              <div className="lg:col-span-6 space-y-4 text-[15px] text-[#262126] leading-relaxed text-justify">
                 <p>
                   Anbu is active in school supporting programs. Some of them are Government schools belong to Nallambakkam, Hastinapuram, Ezhilnagar, Kannaginagar, Karappakkam and Sholinganallur areas in and around Chennai.
                 </p>
@@ -132,6 +140,7 @@ export const SchoolPrograms: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

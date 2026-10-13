@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { IMPACT_HIGHLIGHTS } from '../data/foundationData.ts';
 import { ImageWithFallback } from '../components/ImageWithFallback.tsx';
+import { BannerCarousel } from '../components/BannerCarousel.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -24,9 +25,12 @@ export const Home: React.FC = () => {
   return (
     <div className="space-y-0">
 
-      {/* SECTION 1: HERO SECTION (FULL SCREEN) */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#F6E9EE]/60 via-[#FAF7F8] to-white min-h-[calc(100vh-5rem)] flex items-center py-12 lg:py-0 border-b border-[#E9E1E5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
+      {/* SECTION 1: HOME PAGE BANNER CAROUSEL (5s Auto Sliding) */}
+      <BannerCarousel intervalMs={5000} />
+
+      {/* SECTION 2: HERO SECTION */}
+      <section className="relative overflow-hidden bg-white py-12 lg:py-16 border-b border-[#E9E1E5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left Column: Editorial Headline & Messaging */}
@@ -45,7 +49,7 @@ export const Home: React.FC = () => {
                 Empowering Lives Through Education
               </h1>
 
-              <p className="text-[15px] sm:text-[16px] text-[#70676C] leading-relaxed max-w-lg font-normal">
+              <p className="text-[15px] sm:text-[16px] text-[#70676C] leading-relaxed max-w-lg font-normal text-justify">
                 Anbu Foundation, associated with Sathyabama Institute of Science and Technology, is committed to creating opportunities for deserving students and underserved communities through education, inclusive development, skill-building, and compassionate service.
               </p>
 
@@ -72,28 +76,19 @@ export const Home: React.FC = () => {
 
             {/* Right Column: Photographic Focal Point */}
             <div className="lg:col-span-6 lg:-ml-4 xl:-ml-6">
-              <div className="relative w-full">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E9E1E5] aspect-16/10 sm:aspect-16/9 lg:aspect-7/5 w-full">
+              <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E9E1E5] bg-white w-full">
                   <ImageWithFallback
-                    src="/images/hero-banner.jpg"
-                    alt="Anbu Foundation 20 Years of Impact & Sathyabama Institute"
-                    fallbackTitle="Anbu Foundation Celebration"
+                    src="/images/image-10.png"
+                    alt="Anbu Foundation 19th Anniversary Celebration"
+                    fallbackTitle="Anbu Foundation 19th Anniversary"
                     fallbackCategory="Sathyabama & Anbu Foundation"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-auto object-contain object-center block"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#F6E9EE]/90">
-                      Celebrating Impact
-                    </span>
-                    <p className="text-sm font-sans italic text-white/95 mt-0.5">
-                      "20 Years of Transforming Lives Through Education & Compassion"
-                    </p>
-                  </div>
                 </div>
 
                 {/* Subtle Decorative Maroon Offset Card */}
-                <div className="hidden sm:block absolute -bottom-6 -left-6 bg-white border border-[#E9E1E5] rounded-xl p-4 shadow-lg max-w-xs">
+                <div className="hidden sm:block absolute -bottom-5 -left-5 bg-white border border-[#E9E1E5] rounded-xl p-3.5 shadow-lg max-w-xs">
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-lg bg-[#831238] text-white flex items-center justify-center shrink-0">
                       <Heart className="w-5 h-5 fill-white/20" />
@@ -126,10 +121,10 @@ export const Home: React.FC = () => {
                 <h2 className="text-2xl sm:text-3xl font-sans font-bold text-[#831238] tracking-tight">
                   Dedicated to Uplifting Lives with Purpose &amp; Empathy
                 </h2>
-                <p className="text-[15px] text-[#70676C] leading-relaxed">
+                <p className="text-[15px] text-[#70676C] leading-relaxed text-justify">
                   Rooted in the guiding philosophy of Sathyabama Institute of Science and Technology, Anbu Foundation is dedicated to transforming lives through inclusive education, rural revitalization, community health, and livelihood enablement.
                 </p>
-                <p className="text-[15px] text-[#262126] leading-relaxed">
+                <p className="text-[15px] text-[#262126] leading-relaxed text-justify">
                   We bridge the divide between capability and opportunity—ensuring every deserving child, student, and family finds a supportive platform to thrive with pride and dignity.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -202,7 +197,7 @@ export const Home: React.FC = () => {
       {/* SECTION 2: ANBU FOUNDATION */}
       <section className="py-20 bg-white border-b border-[#E9E1E5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="space-y-6">
 
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#831238] bg-[#F6E9EE] px-3.5 py-1.5 rounded-md border border-[#E9E1E5]">
               <Heart className="w-3.5 h-3.5 fill-[#831238]" />
@@ -213,7 +208,7 @@ export const Home: React.FC = () => {
               Anbu Foundation
             </h2>
 
-            <div className="space-y-4 text-[#262126] text-[15px] leading-relaxed">
+            <div className="space-y-4 text-[#262126] text-[15px] leading-relaxed text-justify">
               <p>
                 Anbu Scholarship is more than financial aid, it's a beacon of hope for students who dare to dream beyond their circumstances. Established in 2006, the scholarship was born from a deeply personal mission: to honor the values of compassion, equity, and education instilled by our parents. What began as a modest initiative has now flourished into a thriving movement, empowering hundreds of students across Tamil Nadu and beyond.
               </p>
@@ -238,7 +233,7 @@ export const Home: React.FC = () => {
       {/* SECTION 3: VISION AND MISSION */}
       <section className="py-20 bg-[#FAF7F8] border-b border-[#E9E1E5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto space-y-10">
+          <div className="space-y-10">
 
             <div className="text-center">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-sans font-bold text-[#831238] tracking-tight">
@@ -257,7 +252,7 @@ export const Home: React.FC = () => {
                     Vision
                   </h3>
                 </div>
-                <p className="text-[15px] text-white/90 leading-relaxed">
+                <p className="text-[15px] text-white/90 leading-relaxed text-justify">
                   To build a society where every individual, irrespective of economic or social background, has access to quality education, healthcare, livelihood opportunities, and a life of dignity through compassionate service and sustainable development.
                 </p>
               </div>
@@ -284,7 +279,7 @@ export const Home: React.FC = () => {
                     "Preserving environmental resources through awareness and conservation programs.",
                     "Creating equal opportunities that foster inclusive growth and human dignity."
                   ].map((missionItem, mIdx) => (
-                    <li key={mIdx} className="flex items-start gap-3 text-sm text-white/90 leading-relaxed">
+                    <li key={mIdx} className="flex items-start gap-3 text-sm text-white/90 leading-relaxed text-justify">
                       <CheckCircle className="w-4 h-4 text-[#F6E9EE] shrink-0 mt-1" />
                       <span>{missionItem}</span>
                     </li>
@@ -300,7 +295,7 @@ export const Home: React.FC = () => {
       {/* SECTION 4: LIFE @ ANBU FOUNDATION */}
       <section id="initiatives" className="py-20 bg-white border-b border-[#E9E1E5] scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto space-y-10">
+          <div className="space-y-10">
 
             <div className="text-center">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-sans font-bold text-[#831238] tracking-tight">

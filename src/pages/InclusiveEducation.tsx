@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart, ExternalLink, CheckCircle } from 'lucide-react';
 import { INITIATIVES } from '../data/foundationData.ts';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -13,8 +14,15 @@ export const InclusiveEducation: React.FC = () => {
   const initiative = INITIATIVES.find(i => i.id === 'inclusive-education')!;
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Inclusive Education"
+        subtitle="“Togetherness is the tool for better tomorrow”"
+        badge="Initiative · Access & Equity"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -45,7 +53,7 @@ export const InclusiveEducation: React.FC = () => {
             </div>
 
             {/* Narrative Content */}
-            <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed">
+            <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed text-justify">
               <p>
                 Education is the only aspect that is equally significant as Breath for everyone. Education need not be formal; everyday offers many learning laps for us to evolve as a better human being. Any form of education should install the sense of progress.
               </p>
@@ -169,6 +177,7 @@ export const InclusiveEducation: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart, Sparkles, Scissors, Users, Award, BookOpen, CheckCircle2 } from 'lucide-react';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -22,8 +23,15 @@ export const SkillDevelopment: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Skill Development"
+        subtitle="“Knowledge transforms into wisdom. Skill transforms into development.”"
+        badge="Initiative · Livelihood & Empowerment"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -54,7 +62,7 @@ export const SkillDevelopment: React.FC = () => {
             </div>
 
             {/* Narrative Content */}
-            <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed">
+            <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed text-justify">
               <p>
                 Our country has abundance of talent for this transformation to take place. We should offer enough motivation and assistance; Anbu is dedicated to prepare efficient skill pool for the society.
               </p>
@@ -183,6 +191,7 @@ export const SkillDevelopment: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

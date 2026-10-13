@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart, Sprout, Users, GraduationCap, ArrowRight, CheckCircle, MapPin } from 'lucide-react';
 import { INITIATIVES } from '../data/foundationData.ts';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -20,8 +21,15 @@ export const RuralDevelopment: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Rural Development"
+        subtitle="“India lives in its Villages” — Empowering communities and lifting livelihoods through grassroots stewardship."
+        badge="Initiative · Grassroots Empowerment"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -52,7 +60,7 @@ export const RuralDevelopment: React.FC = () => {
             </div>
 
             {/* Narrative Content */}
-            <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed">
+            <div className="space-y-4 text-[15px] text-[#262126] leading-relaxed text-justify">
               <p>
                 The progressive wheels of development possess smooth transit into future, when villages are empowered. Anbu assimilated this fact in its genome and stepped into rural development. Nallambakkam ,Ezhilnagar, Kannaginagar are adopted besides improving the conditions of living in slums of sub-urban areas such as Perumbakkam.
               </p>
@@ -172,6 +180,7 @@ export const RuralDevelopment: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };
