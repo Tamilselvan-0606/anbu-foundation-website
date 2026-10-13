@@ -1,5 +1,6 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -42,23 +43,15 @@ export const SuccessStories: React.FC = () => {
 
   return (
     <div className="space-y-0">
-      {/* Header */}
-      <section className="bg-gradient-to-b from-[#F6E9EE]/80 via-[#FAF7F8] to-white py-14 border-b border-[#E9E1E5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-3">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-sans font-bold text-[#831238] tracking-tight">
-              Success Stories
-            </h1>
-            <p className="text-[15px] text-[#70676C] leading-relaxed">
-              Every opportunity creates the possibility of a new beginning. Discover the journeys and feedback of scholars and families supported by Anbu Foundation.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        title="Success Stories"
+        subtitle="Every opportunity creates the possibility of a new beginning. Discover the journeys and feedback of scholars and families supported by Anbu Foundation."
+        badge="Impact & Testimonials"
+      />
 
       {/* Stories Table Section */}
       <section className="py-16 sm:py-20 bg-white border-b border-[#E9E1E5]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Table matching reference UI */}
           <div className="overflow-x-auto rounded-xl border border-[#D0D7DE] shadow-sm bg-white">
@@ -99,7 +92,7 @@ export const SuccessStories: React.FC = () => {
                     </td>
 
                     {/* DESCRIPTION COLUMN */}
-                    <td className="w-[70%] sm:w-[72%] p-6 sm:p-8 align-middle text-[#262126] text-xs sm:text-sm leading-relaxed">
+                    <td className="w-[70%] sm:w-[72%] p-6 sm:p-8 align-middle text-[#262126] text-xs sm:text-sm leading-relaxed text-justify">
                       <p className="leading-relaxed whitespace-pre-line">
                         {story.description}
                       </p>

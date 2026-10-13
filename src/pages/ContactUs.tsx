@@ -8,6 +8,7 @@ import {
   Heart,
   ExternalLink
 } from 'lucide-react';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 export const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -50,24 +51,12 @@ export const ContactUs: React.FC = () => {
     <div className="space-y-0">
       
       {/* Header Banner */}
-      <section className="bg-gradient-to-b from-[#F6E9EE]/80 via-[#FAF7F8] to-white py-16 border-b border-[#E9E1E5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#831238] bg-[#F6E9EE] px-3 py-1 rounded-md">
-              <Heart className="w-3.5 h-3.5 fill-[#831238]" />
-              <span>Contact Us</span>
-              <span>·</span>
-              <span>Anbu Foundation</span>
-            </div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-sans font-bold text-[#831238] tracking-tight">
-              Contact Page
-            </h1>
-            <p className="text-[15px] text-[#70676C] leading-relaxed">
-              We welcome all enquiries regarding scholarships, social welfare initiatives, institutional partnerships, and volunteering.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        title="Contact Us"
+        subtitle="We welcome all enquiries regarding scholarships, social welfare initiatives, institutional partnerships, and volunteering."
+        badge="Get In Touch"
+        imageSrc="/images/contact-banner.jpg"
+      />
 
       {/* Main Contact Grid */}
       <section className="py-20 bg-white border-b border-[#E9E1E5]">

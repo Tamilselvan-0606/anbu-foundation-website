@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart, CheckCircle2, ShieldCheck, ArrowRight, FileCheck, Scale, Award } from 'lucide-react';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -69,8 +70,15 @@ export const Eligibility: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Eligibility Criteria"
+        subtitle="Comprehensive guidelines, academic prerequisites, and selection criteria for Anbu Scholarship applicants."
+        badge="Admission · Policy & Guidelines"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -114,7 +122,7 @@ export const Eligibility: React.FC = () => {
                     <span className="text-xs font-bold uppercase tracking-wider text-[#831238] block sm:inline sm:mr-2">
                       {req.highlight}:
                     </span>
-                    <span className="text-[15px] text-[#262126] leading-relaxed">
+                    <span className="text-[15px] text-[#262126] leading-relaxed text-justify">
                       {req.text}
                     </span>
                   </div>
@@ -155,6 +163,7 @@ export const Eligibility: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

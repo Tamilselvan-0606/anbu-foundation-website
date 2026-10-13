@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 import { Heart, HelpCircle, ChevronDown, MessageSquareQuote, ArrowRight } from 'lucide-react';
 import { FAQS } from '../data/foundationData.ts';
+import { PageBanner } from '../components/PageBanner.tsx';
 
 interface ContextType {
   openScholarshipModal: () => void;
@@ -17,8 +18,15 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[75vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="space-y-0">
+      <PageBanner
+        title="Frequently Asked Questions"
+        subtitle="Common inquiries, guidelines, and answers regarding Anbu Foundation initiatives and procedures."
+        badge="Help & Information"
+      />
+
+      <div className="min-h-[60vh] bg-gradient-to-b from-[#F6E9EE]/40 via-white to-[#FAF7F8] py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Card */}
         <div className="bg-white rounded-none shadow-xl border border-[#E9E1E5]/80 overflow-hidden">
@@ -80,7 +88,7 @@ export const FAQ: React.FC = () => {
 
                     {/* Always visible on larger devices or smooth expanded view */}
                     <div
-                      className={`px-5 sm:px-6 pb-6 pt-1 text-[15px] text-[#262126] leading-relaxed pl-16 ${
+                      className={`px-5 sm:px-6 pb-6 pt-1 text-[15px] text-[#262126] leading-relaxed pl-16 text-justify ${
                         isOpen ? 'block' : 'hidden sm:block'
                       }`}
                     >
@@ -124,6 +132,7 @@ export const FAQ: React.FC = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };
